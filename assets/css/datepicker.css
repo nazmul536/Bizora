@@ -1,0 +1,109 @@
+/* =========================================================
+   BIZORA — DATEPICKER FIELD
+========================================================= */
+
+.date-picker-field {
+    position: relative;
+    width: 100%;
+}
+
+.date-picker-field > i {
+    position: absolute;
+    top: 50%;
+    left: 13px;
+
+    color: #7d8799;
+    font-size: 12px;
+
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.date-picker-input {
+    width: 100%;
+    height: 40px;
+
+    padding: 0 13px 0 36px;
+
+    color: #354054;
+    background: #ffffff;
+
+    border: 1px solid #e1e5ed;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.date-picker-input::placeholder {
+    color: #9ca5b4;
+}
+
+.date-picker-input:focus {
+    border-color: #8b84ff;
+    box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.09);
+}
+
+
+/* =========================================================
+   FLATPICKR OVERRIDE
+========================================================= */
+
+.flatpickr-calendar {
+    border: 1px solid #e7eaf1;
+    border-radius: 12px;
+
+    box-shadow: 0 12px 30px rgba(31, 41, 55, 0.12);
+
+    font-family: inherit;
+}
+
+.flatpickr-months {
+    padding: 5px 5px 0;
+}
+
+.flatpickr-current-month {
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.flatpickr-weekdays {
+    height: 32px;
+}
+
+.flatpickr-weekday {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.flatpickr-day {
+    height: 34px;
+    line-height: 34px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+}
+
+.flatpickr-day:hover {
+    background: #f0efff;
+    border-color: #f0efff;
+}
+
+.flatpickr-day.today {
+    border-color: #635bff;
+}
+
+.flatpickr-day.selected {
+    background: #635bff;
+    border-color: #635bff;
+}

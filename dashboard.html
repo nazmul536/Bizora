@@ -12,17 +12,18 @@
 
     <title>Bizora — Business Dashboard</title>
 
-    <!-- =====================================================
-         FONT AWESOME
-    ====================================================== -->
+    <!--  FONT AWESOME -->
 
     <link rel="stylesheet" href="assets/fontawesome/fontCss/all.min.css">
 
-    <!-- =====================================================
-         DASHBOARD CSS
-    ====================================================== -->
-
+    <!-- DASHBOARD CSS  -->
     <link rel="stylesheet" href="assets/css/dashboard.css">
+
+    <!-- Datepicker CSS  -->
+    <link rel="stylesheet" href="assets/css/datepicker.css">
+  
+    <!-- Flatpickr CSS  -->
+    <link rel="stylesheet" href="assets/flatpickr/flatpickr.min.css">
 
 </head>
 
@@ -1328,187 +1329,187 @@
 
 
                 <!-- =====================================================
-     HEADER PROFILE
-===================================================== -->
+                    HEADER PROFILE
+                ===================================================== -->
 
-<div class="header-profile-wrap">
+                <div class="header-profile-wrap">
 
-    <button
-        type="button"
-        class="header-profile"
-        id="profileBtn"
-        aria-expanded="false"
-        aria-haspopup="true"
-        title="Account menu"
-    >
+                    <button
+                        type="button"
+                        class="header-profile"
+                        id="profileBtn"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        title="Account menu"
+                    >
 
-        <div class="avatar">
-            NH
-        </div>
+                        <div class="avatar">
+                            NH
+                        </div>
 
-        <div class="header-profile-info">
+                        <div class="header-profile-info">
 
-            <strong>
-                Admin
-            </strong>
+                            <strong>
+                                Admin
+                            </strong>
 
-            <span>
-                Owner
-            </span>
+                            <span>
+                                Owner
+                            </span>
 
-        </div>
+                        </div>
 
-        <i class="fa-solid fa-chevron-down"></i>
+                        <i class="fa-solid fa-chevron-down"></i>
 
-    </button>
+                    </button>
 
 
-    <!-- =================================================
-         PROFILE DROPDOWN
-    ================================================== -->
+                    <!-- =================================================
+                        PROFILE DROPDOWN
+                    ================================================== -->
 
-    <div
-        class="profile-dropdown"
-        id="profileDropdown"
-    >
+                    <div
+                        class="profile-dropdown"
+                        id="profileDropdown"
+                    >
 
-        <div class="profile-dropdown-head">
+                        <div class="profile-dropdown-head">
 
-            <div class="avatar">
-                NH
-            </div>
+                            <div class="avatar">
+                                NH
+                            </div>
 
-            <div>
+                            <div>
 
-                <strong>
-                    Admin
-                </strong>
+                                <strong>
+                                    Admin
+                                </strong>
 
-                <span>
-                    admin@bizora.com
-                </span>
+                                <span>
+                                    admin@bizora.com
+                                </span>
 
-            </div>
+                            </div>
 
-        </div>
+                        </div>
 
 
-        <div class="profile-dropdown-divider"></div>
+                        <div class="profile-dropdown-divider"></div>
 
 
-        <a href="#" class="profile-menu-item">
+                        <a href="#" class="profile-menu-item">
 
-            <span>
-                <i class="fa-regular fa-user"></i>
-            </span>
+                            <span>
+                                <i class="fa-regular fa-user"></i>
+                            </span>
 
-            <div>
+                            <div>
 
-                <strong>
-                    My Profile
-                </strong>
+                                <strong>
+                                    My Profile
+                                </strong>
 
-                <small>
-                    Manage your profile
-                </small>
+                                <small>
+                                    Manage your profile
+                                </small>
 
-            </div>
+                            </div>
 
-        </a>
+                        </a>
 
 
-        <a href="#" class="profile-menu-item">
+                        <a href="#" class="profile-menu-item">
 
-            <span>
-                <i class="fa-solid fa-gear"></i>
-            </span>
+                            <span>
+                                <i class="fa-solid fa-gear"></i>
+                            </span>
 
-            <div>
+                            <div>
 
-                <strong>
-                    Account Settings
-                </strong>
+                                <strong>
+                                    Account Settings
+                                </strong>
 
-                <small>
-                    Preferences and security
-                </small>
+                                <small>
+                                    Preferences and security
+                                </small>
 
-            </div>
+                            </div>
 
-        </a>
+                        </a>
 
 
-        <a href="#" class="profile-menu-item">
+                        <a href="#" class="profile-menu-item">
 
-            <span>
-                <i class="fa-regular fa-bell"></i>
-            </span>
+                            <span>
+                                <i class="fa-regular fa-bell"></i>
+                            </span>
 
-            <div>
+                            <div>
 
-                <strong>
-                    Notifications
-                </strong>
+                                <strong>
+                                    Notifications
+                                </strong>
 
-                <small>
-                    Manage notifications
-                </small>
+                                <small>
+                                    Manage notifications
+                                </small>
 
-            </div>
+                            </div>
 
-        </a>
+                        </a>
 
 
-        <a href="#" class="profile-menu-item">
+                        <a href="#" class="profile-menu-item">
 
-            <span>
-                <i class="fa-solid fa-moon"></i>
-            </span>
+                            <span>
+                                <i class="fa-solid fa-moon"></i>
+                            </span>
 
-            <div>
+                            <div>
 
-                <strong>
-                    Appearance
-                </strong>
+                                <strong>
+                                    Appearance
+                                </strong>
 
-                <small>
-                    Theme preferences
-                </small>
+                                <small>
+                                    Theme preferences
+                                </small>
 
-            </div>
+                            </div>
 
-        </a>
+                        </a>
 
 
-        <div class="profile-dropdown-divider"></div>
+                        <div class="profile-dropdown-divider"></div>
 
 
-        <button
-            type="button"
-            class="profile-menu-item logout"
-        >
+                        <button
+                            type="button"
+                            class="profile-menu-item logout"
+                        >
 
-            <span>
-                <i class="fa-solid fa-right-from-bracket"></i>
-            </span>
+                            <span>
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                            </span>
 
-            <div>
+                            <div>
 
-                <strong>
-                    Sign Out
-                </strong>
+                                <strong>
+                                    Sign Out
+                                </strong>
 
-                <small>
-                    Sign out of Bizora
-                </small>
+                                <small>
+                                    Sign out of Bizora
+                                </small>
 
-            </div>
+                            </div>
 
-        </button>
+                        </button>
 
-    </div>
+                    </div>
 
-</div>
+                </div>
 
             </div>
 
@@ -1559,21 +1560,19 @@
                 <div class="heading-actions">
 
 
-                    <button
-                        type="button"
-                        class="btn btn-light"
-                        id="dateFilterBtn"
-                    >
+                    <div class="date-picker-field">
 
-                        <i class="fa-regular fa-calendar"></i>
+    <i class="fa-regular fa-calendar"></i>
 
-                        <span>
-                            01 Sep — 06 Sep 2026
-                        </span>
+    <input
+        type="text"
+        id="salesDate"
+        class="date-picker-input"
+        placeholder="Select date"
+        readonly
+    >
 
-                        <i class="fa-solid fa-chevron-down"></i>
-
-                    </button>
+</div>
 
 
                     <button
@@ -3181,6 +3180,8 @@
 
 <script src="assets/js/dashboard.js"></script>
 <script src="assets/js/chart.js"></script>
+<script src="assets/js/datepicker.js"></script>
+<script src="assets/flatpickr/flatpickr.min.js"></script>
 
 
 </body>
