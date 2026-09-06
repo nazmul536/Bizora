@@ -1,0 +1,3188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Bizora — Business Dashboard</title>
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet" href="assets/fontawesome/fontCss/all.min.css">
+
+    <!-- =====================================================
+         DASHBOARD CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <!-- =================================================
+             BRAND
+        ================================================== -->
+
+        <div class="sidebar-top">
+
+
+            <a
+                href="dashboard.html"
+                class="brand"
+            >
+
+                <span class="brand-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </span>
+
+
+                <span class="brand-text">
+
+                    <strong>
+                        Bizora
+                    </strong>
+
+                    <small>
+                        BUSINESS SUITE
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <!-- Desktop collapse -->
+
+            <button
+                type="button"
+                class="sidebar-toggle"
+                id="sidebarToggle"
+                title="Collapse sidebar"
+                aria-label="Collapse sidebar"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <!-- Mobile close -->
+
+            <button
+                type="button"
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close sidebar"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+            BUSINESS SWITCHER
+        ================================================= -->
+
+        <div class="business-switcher-wrap">
+
+            <button
+                type="button"
+                class="business-switcher"
+                id="businessSwitcher"
+                aria-expanded="false"
+                aria-haspopup="true"
+            >
+
+                <span class="business-logo">
+
+                    <i class="fa-solid fa-building"></i>
+
+                </span>
+
+
+                <span class="business-info">
+
+                    <strong id="businessName">
+                        My Business
+                    </strong>
+
+                    <small id="businessBranch">
+                        Main Branch
+                    </small>
+
+                </span>
+
+
+                <span class="business-arrow">
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </span>
+
+            </button>
+
+
+            <!-- BUSINESS DROPDOWN -->
+
+            <div
+                class="business-dropdown"
+                id="businessDropdown"
+                role="menu"
+            >
+
+                <div class="business-dropdown-header">
+
+                    <span>
+                        <i class="fa-solid fa-building"></i>
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Switch Branch
+                        </strong>
+
+                        <small>
+                            Select your business branch
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="business-dropdown-divider"></div>
+
+
+                <!-- MAIN BRANCH -->
+
+                <button
+                    type="button"
+                    class="business-option active"
+                    data-business="Main Branch"
+                    role="menuitem"
+                >
+
+                    <span class="business-option-icon">
+
+                        <i class="fa-solid fa-building"></i>
+
+                    </span>
+
+                    <span class="business-option-info">
+
+                        <strong>
+                            Main Branch
+                        </strong>
+
+                        <small>
+                            Main business branch
+                        </small>
+
+                    </span>
+
+                    <span class="business-option-check">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </span>
+
+                </button>
+
+
+                <!-- UTTARA -->
+
+                <button
+                    type="button"
+                    class="business-option"
+                    data-business="Uttara Branch"
+                    role="menuitem"
+                >
+
+                    <span class="business-option-icon">
+
+                        <i class="fa-solid fa-building"></i>
+
+                    </span>
+
+                    <span class="business-option-info">
+
+                        <strong>
+                            Uttara Branch
+                        </strong>
+
+                        <small>
+                            Uttara business branch
+                        </small>
+
+                    </span>
+
+                    <span class="business-option-check">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </span>
+
+                </button>
+
+
+                <!-- DHANMONDI -->
+
+                <button
+                    type="button"
+                    class="business-option"
+                    data-business="Dhanmondi Branch"
+                    role="menuitem"
+                >
+
+                    <span class="business-option-icon">
+
+                        <i class="fa-solid fa-building"></i>
+
+                    </span>
+
+                    <span class="business-option-info">
+
+                        <strong>
+                            Dhanmondi Branch
+                        </strong>
+
+                        <small>
+                            Dhanmondi business branch
+                        </small>
+
+                    </span>
+
+                    <span class="business-option-check">
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </span>
+
+                </button>
+
+
+                <div class="business-dropdown-divider"></div>
+
+
+                <!-- ADD NEW -->
+
+                <button
+                    type="button"
+                    class="business-add"
+                    role="menuitem"
+                >
+
+                    <span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Add New Branch
+                        </strong>
+
+                        <small>
+                            Create another business branch
+                        </small>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================================
+     SIDEBAR NAVIGATION
+========================================================= -->
+
+<nav class="sidebar-nav">
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <div class="nav-group">
+
+        <div class="nav-label">
+            MAIN
+        </div>
+
+
+        <!-- DASHBOARD — NO DROPDOWN -->
+
+        <a
+            href="dashboard.html"
+            class="nav-item active"
+            data-tooltip="Dashboard"
+        >
+
+            <span class="nav-icon">
+                <i class="fa-solid fa-house"></i>
+            </span>
+
+            <span class="nav-text">
+                Dashboard
+            </span>
+
+        </a>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BUSINESS
+    ====================================================== -->
+
+    <div class="nav-group">
+
+        <div class="nav-label">
+            BUSINESS
+        </div>
+
+
+        <!-- SALES -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="sales"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+
+                <span class="nav-text">
+                    Sales
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="sales"
+            >
+
+                <a href="pages/sales/sales.html">
+                    All Sales
+                </a>
+
+                <a href="pages/sales/new-sale.html">
+                    New Sale
+                </a>
+
+                <a href="pages/sales/returns.html">
+                    Sales Returns
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PURCHASES -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="purchases"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </span>
+
+                <span class="nav-text">
+                    Purchases
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="purchases"
+            >
+
+                <a href="pages/purchases/purchases.html">
+                    All Purchases
+                </a>
+
+                <a href="pages/purchases/new-purchase.html">
+                    New Purchase
+                </a>
+
+                <a href="pages/purchases/returns.html">
+                    Purchase Returns
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- INVOICES -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="invoices"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-file-invoice"></i>
+                </span>
+
+                <span class="nav-text">
+                    Invoices
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="invoices"
+            >
+
+                <a href="pages/invoices/invoices.html">
+                    All Invoices
+                </a>
+
+                <a href="pages/invoices/create-invoice.html">
+                    Create Invoice
+                </a>
+
+                <a href="pages/invoices/pending.html">
+                    Pending Invoices
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCTS -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="products"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-box"></i>
+                </span>
+
+                <span class="nav-text">
+                    Products
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="products"
+            >
+
+                <a href="pages/products/products.html">
+                    All Products
+                </a>
+
+                <a href="pages/products/add-product.html">
+                    Add Product
+                </a>
+
+                <a href="pages/products/categories.html">
+                    Categories
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- INVENTORY -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="inventory"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-warehouse"></i>
+                </span>
+
+                <span class="nav-text">
+                    Inventory
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="inventory"
+            >
+
+                <a href="pages/inventory/inventory.html">
+                    Stock Overview
+                </a>
+
+                <a href="pages/inventory/low-stock.html">
+                    Low Stock
+                </a>
+
+                <a href="pages/inventory/adjustments.html">
+                    Stock Adjustments
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FINANCE
+    ====================================================== -->
+
+    <div class="nav-group">
+
+        <div class="nav-label">
+            FINANCE
+        </div>
+
+
+        <!-- EXPENSES -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="expenses"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-arrow-trend-down"></i>
+                </span>
+
+                <span class="nav-text">
+                    Expenses
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="expenses"
+            >
+
+                <a href="pages/expenses/expenses.html">
+                    All Expenses
+                </a>
+
+                <a href="pages/expenses/add-expense.html">
+                    Add Expense
+                </a>
+
+                <a href="pages/expenses/categories.html">
+                    Categories
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- INCOME -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="income"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                </span>
+
+                <span class="nav-text">
+                    Income
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="income"
+            >
+
+                <a href="pages/income/income.html">
+                    All Income
+                </a>
+
+                <a href="pages/income/add-income.html">
+                    Add Income
+                </a>
+
+                <a href="pages/income/categories.html">
+                    Categories
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PAYMENTS -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="payments"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-credit-card"></i>
+                </span>
+
+                <span class="nav-text">
+                    Payments
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="payments"
+            >
+
+                <a href="pages/payments/payments.html">
+                    All Payments
+                </a>
+
+                <a href="pages/payments/receive-payment.html">
+                    Receive Payment
+                </a>
+
+                <a href="pages/payments/methods.html">
+                    Payment Methods
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TRANSACTIONS -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="transactions"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-right-left"></i>
+                </span>
+
+                <span class="nav-text">
+                    Transactions
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="transactions"
+            >
+
+                <a href="pages/transactions/transactions.html">
+                    All Transactions
+                </a>
+
+                <a href="pages/transactions/money-in.html">
+                    Money In
+                </a>
+
+                <a href="pages/transactions/money-out.html">
+                    Money Out
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PEOPLE
+    ====================================================== -->
+
+    <div class="nav-group">
+
+        <div class="nav-label">
+            PEOPLE
+        </div>
+
+
+        <!-- CUSTOMERS -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="customers"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-users"></i>
+                </span>
+
+                <span class="nav-text">
+                    Customers
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="customers"
+            >
+
+                <a href="pages/customers/customers.html">
+                    All Customers
+                </a>
+
+                <a href="pages/customers/add-customer.html">
+                    Add Customer
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SUPPLIERS -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="suppliers"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-truck"></i>
+                </span>
+
+                <span class="nav-text">
+                    Suppliers
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="suppliers"
+            >
+
+                <a href="pages/suppliers/suppliers.html">
+                    All Suppliers
+                </a>
+
+                <a href="pages/suppliers/add-supplier.html">
+                    Add Supplier
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         INSIGHTS
+    ====================================================== -->
+
+    <div class="nav-group">
+
+        <div class="nav-label">
+            INSIGHTS
+        </div>
+
+
+        <!-- REPORTS -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="reports"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-chart-column"></i>
+                </span>
+
+                <span class="nav-text">
+                    Reports
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="reports"
+            >
+
+                <a href="pages/reports/reports.html">
+                    Overview
+                </a>
+
+                <a href="pages/reports/sales-report.html">
+                    Sales Reports
+                </a>
+
+                <a href="pages/reports/purchase-report.html">
+                    Purchase Reports
+                </a>
+
+                <a href="pages/reports/profit-loss.html">
+                    Profit &amp; Loss
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ANALYTICS -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="analytics"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </span>
+
+                <span class="nav-text">
+                    Analytics
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="analytics"
+            >
+
+                <a href="pages/analytics/analytics.html">
+                    Overview
+                </a>
+
+                <a href="pages/analytics/sales.html">
+                    Sales Analytics
+                </a>
+
+                <a href="pages/analytics/revenue.html">
+                    Revenue Analytics
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SYSTEM
+    ====================================================== -->
+
+    <div class="nav-group">
+
+        <div class="nav-label">
+            SYSTEM
+        </div>
+
+
+        <!-- SETTINGS -->
+
+        <div class="nav-dropdown">
+
+            <button
+                type="button"
+                class="nav-item nav-dropdown-toggle"
+                data-menu="settings"
+                aria-expanded="false"
+            >
+
+                <span class="nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span class="nav-text">
+                    Settings
+                </span>
+
+                <span class="nav-chevron">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+
+            </button>
+
+
+            <div
+                class="nav-submenu"
+                data-submenu="settings"
+            >
+
+                <a href="pages/settings/settings.html">
+                    General
+                </a>
+
+                <a href="pages/settings/business.html">
+                    Business Settings
+                </a>
+
+                <a href="pages/settings/users.html">
+                    Users &amp; Permissions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</nav>
+
+
+        <!-- =====================================================
+             SIDEBAR BOTTOM
+        ====================================================== -->
+
+        <div class="sidebar-bottom">
+
+
+            <!-- =================================================
+                 PRO CARD
+            ================================================== -->
+
+            <!-- <div class="upgrade-card">
+
+
+                <div class="upgrade-icon">
+
+                    <i class="fa-solid fa-crown"></i>
+
+                </div>
+
+
+                <div class="upgrade-content">
+
+                    <strong>
+                        Bizora Pro
+                    </strong>
+
+                    <p>
+                        Unlock advanced analytics
+                        and business tools.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="upgrade-btn"
+                >
+
+                    <span>
+                        Upgrade
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+            </div> -->
+
+
+
+            <!-- =================================================
+                 USER
+            ================================================== -->
+
+            <div class="sidebar-user">
+
+
+                <div class="avatar">
+
+                    NH
+
+                    <span class="online-dot"></span>
+
+                </div>
+
+
+                <div class="user-info">
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <small>
+                        Owner
+                    </small>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="user-more"
+                    aria-label="User options"
+                >
+
+                    <i class="fa-solid fa-ellipsis"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+
+                <!-- Mobile menu -->
+
+                <button
+                    type="button"
+                    class="mobile-menu"
+                    id="mobileMenu"
+                    aria-label="Open menu"
+                >
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <!-- Desktop sidebar toggle -->
+
+                <button
+                    type="button"
+                    class="desktop-menu"
+                    id="desktopMenu"
+                    aria-label="Toggle sidebar"
+                >
+
+                    <i class="fa-solid fa-bars-staggered"></i>
+
+                </button>
+
+
+                <div class="breadcrumb">
+
+                    <span>
+                        Pages
+                    </span>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <strong>
+                        Dashboard
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="topbar-actions">
+
+
+                <div class="header-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="globalSearch"
+                        placeholder="Search anything..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="header-btn notification-btn"
+                    title="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <!-- =====================================================
+     HEADER PROFILE
+===================================================== -->
+
+<div class="header-profile-wrap">
+
+    <button
+        type="button"
+        class="header-profile"
+        id="profileBtn"
+        aria-expanded="false"
+        aria-haspopup="true"
+        title="Account menu"
+    >
+
+        <div class="avatar">
+            NH
+        </div>
+
+        <div class="header-profile-info">
+
+            <strong>
+                Admin
+            </strong>
+
+            <span>
+                Owner
+            </span>
+
+        </div>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </button>
+
+
+    <!-- =================================================
+         PROFILE DROPDOWN
+    ================================================== -->
+
+    <div
+        class="profile-dropdown"
+        id="profileDropdown"
+    >
+
+        <div class="profile-dropdown-head">
+
+            <div class="avatar">
+                NH
+            </div>
+
+            <div>
+
+                <strong>
+                    Admin
+                </strong>
+
+                <span>
+                    admin@bizora.com
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-dropdown-divider"></div>
+
+
+        <a href="#" class="profile-menu-item">
+
+            <span>
+                <i class="fa-regular fa-user"></i>
+            </span>
+
+            <div>
+
+                <strong>
+                    My Profile
+                </strong>
+
+                <small>
+                    Manage your profile
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <a href="#" class="profile-menu-item">
+
+            <span>
+                <i class="fa-solid fa-gear"></i>
+            </span>
+
+            <div>
+
+                <strong>
+                    Account Settings
+                </strong>
+
+                <small>
+                    Preferences and security
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <a href="#" class="profile-menu-item">
+
+            <span>
+                <i class="fa-regular fa-bell"></i>
+            </span>
+
+            <div>
+
+                <strong>
+                    Notifications
+                </strong>
+
+                <small>
+                    Manage notifications
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <a href="#" class="profile-menu-item">
+
+            <span>
+                <i class="fa-solid fa-moon"></i>
+            </span>
+
+            <div>
+
+                <strong>
+                    Appearance
+                </strong>
+
+                <small>
+                    Theme preferences
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <div class="profile-dropdown-divider"></div>
+
+
+        <button
+            type="button"
+            class="profile-menu-item logout"
+        >
+
+            <span>
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </span>
+
+            <div>
+
+                <strong>
+                    Sign Out
+                </strong>
+
+                <small>
+                    Sign out of Bizora
+                </small>
+
+            </div>
+
+        </button>
+
+    </div>
+
+</div>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <section class="content">
+
+
+            <!-- =================================================
+                 PAGE HEADING
+            ================================================== -->
+
+            <div class="page-heading">
+
+
+                <div>
+
+                    <div class="eyebrow">
+
+                        <i class="fa-solid fa-sparkles"></i>
+
+                        BUSINESS OVERVIEW
+
+                    </div>
+
+
+                    <h1>
+                        Good morning, Admin 👋
+                    </h1>
+
+
+                    <p>
+                        Here's what's happening with
+                        your business today.
+                    </p>
+
+                </div>
+
+
+
+                <div class="heading-actions">
+
+
+                    <button
+                        type="button"
+                        class="btn btn-light"
+                        id="dateFilterBtn"
+                    >
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        <span>
+                            01 Sep — 06 Sep 2026
+                        </span>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="quickAddBtn"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Quick Add
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 KPI CARDS
+            ================================================== -->
+
+            <div class="stats-grid">
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Total Sales
+                        </span>
+
+                        <div class="stat-icon sales">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-value">
+                        $48,290.00
+                    </div>
+
+
+                    <div class="stat-bottom positive">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <strong>
+                            12.8%
+                        </strong>
+
+                        <span>
+                            vs last month
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Total Revenue
+                        </span>
+
+                        <div class="stat-icon revenue">
+
+                            <i class="fa-solid fa-wallet"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-value">
+                        $62,840.00
+                    </div>
+
+
+                    <div class="stat-bottom positive">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <strong>
+                            8.4%
+                        </strong>
+
+                        <span>
+                            vs last month
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Total Expenses
+                        </span>
+
+                        <div class="stat-icon expense">
+
+                            <i class="fa-solid fa-arrow-trend-down"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-value">
+                        $21,450.00
+                    </div>
+
+
+                    <div class="stat-bottom negative">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <strong>
+                            4.2%
+                        </strong>
+
+                        <span>
+                            vs last month
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+
+                        <span>
+                            Net Profit
+                        </span>
+
+                        <div class="stat-icon profit">
+
+                            <i class="fa-solid fa-coins"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-value">
+                        $27,390.00
+                    </div>
+
+
+                    <div class="stat-bottom positive">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <strong>
+                            15.6%
+                        </strong>
+
+                        <span>
+                            vs last month
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MINI STATS
+            ================================================== -->
+
+            <div class="mini-stats">
+
+
+                <div class="mini-stat">
+
+                    <div class="mini-stat-icon">
+
+                        <i class="fa-solid fa-money-bill-wave"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Cash Balance
+                        </span>
+
+                        <strong>
+                            $18,640
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <div class="mini-stat-icon">
+
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Accounts Receivable
+                        </span>
+
+                        <strong>
+                            $12,850
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <div class="mini-stat-icon">
+
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Accounts Payable
+                        </span>
+
+                        <strong>
+                            $7,420
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <div class="mini-stat-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Customers
+                        </span>
+
+                        <strong>
+                            1,284
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <div class="mini-stat-icon">
+
+                        <i class="fa-solid fa-box"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Products
+                        </span>
+
+                        <strong>
+                            486
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CHART ROW
+            ================================================== -->
+
+            <div class="dashboard-grid two-columns">
+
+
+                <!-- Revenue -->
+
+                <section class="panel chart-panel">
+
+
+                    <div class="panel-header">
+
+
+                        <div>
+
+                            <h2>
+                                Revenue Overview
+                            </h2>
+
+                            <p>
+                                Revenue, expenses and
+                                profit performance
+                            </p>
+
+                        </div>
+
+
+                        <div class="chart-actions">
+
+
+                            <button
+                                type="button"
+                                class="chart-filter active"
+                            >
+                                Monthly
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="chart-filter"
+                            >
+                                Weekly
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="chart-menu"
+                            >
+
+                                <i class="fa-solid fa-ellipsis"></i>
+
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="chart-summary">
+
+
+                        <div>
+
+                            <span>
+                                Revenue
+                            </span>
+
+                            <strong>
+                                $62,840
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Expenses
+                            </span>
+
+                            <strong>
+                                $21,450
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Profit
+                            </span>
+
+                            <strong>
+                                $41,390
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="chart-container">
+
+                        <canvas id="revenueChart"></canvas>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- Profit -->
+
+                <section class="panel profit-panel">
+
+
+                    <div class="panel-header">
+
+
+                        <div>
+
+                            <h2>
+                                Profit Margin
+                            </h2>
+
+                            <p>
+                                Current business performance
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="icon-btn"
+                        >
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <div class="profit-chart">
+
+                        <canvas id="profitChart"></canvas>
+
+
+                        <div class="profit-center">
+
+                            <strong>
+                                65.8%
+                            </strong>
+
+                            <span>
+                                Profit Margin
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profit-info">
+
+
+                        <div>
+
+                            <span class="legend-dot revenue-dot"></span>
+
+                            <div>
+
+                                <strong>
+                                    Revenue
+                                </strong>
+
+                                <span>
+                                    $62,840
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="legend-dot expense-dot"></span>
+
+                            <div>
+
+                                <strong>
+                                    Expenses
+                                </strong>
+
+                                <span>
+                                    $21,450
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="profit-footer">
+
+                        <span>
+
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+
+                            15.6%
+
+                        </span>
+
+                        improvement from last month
+
+                    </div>
+
+
+                </section>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RECENT SALES + PRODUCTS
+            ================================================== -->
+
+            <div class="dashboard-grid two-columns">
+
+
+                <!-- Recent Sales -->
+
+                <section class="panel">
+
+
+                    <div class="panel-header">
+
+
+                        <div>
+
+                            <h2>
+                                Recent Sales
+                            </h2>
+
+                            <p>
+                                Latest sales activity
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="pages/sales/sales.html"
+                            class="view-link"
+                        >
+
+                            View all
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+
+                        <table>
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Customer
+                                    </th>
+
+                                    <th>
+                                        Invoice
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-cell">
+
+                                            <span class="customer-avatar">
+                                                JD
+                                            </span>
+
+                                            <strong>
+                                                John Davis
+                                            </strong>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        #INV-1048
+                                    </td>
+
+                                    <td>
+                                        $1,280
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge paid">
+                                            Paid
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-cell">
+
+                                            <span class="customer-avatar">
+                                                SA
+                                            </span>
+
+                                            <strong>
+                                                Sarah Ahmed
+                                            </strong>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        #INV-1047
+                                    </td>
+
+                                    <td>
+                                        $845
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge pending">
+                                            Pending
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-cell">
+
+                                            <span class="customer-avatar">
+                                                MK
+                                            </span>
+
+                                            <strong>
+                                                Michael Khan
+                                            </strong>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        #INV-1046
+                                    </td>
+
+                                    <td>
+                                        $2,140
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge paid">
+                                            Paid
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="customer-cell">
+
+                                            <span class="customer-avatar">
+                                                RW
+                                            </span>
+
+                                            <strong>
+                                                Robert Wilson
+                                            </strong>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        #INV-1045
+                                    </td>
+
+                                    <td>
+                                        $590
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge overdue">
+                                            Overdue
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+
+                        </table>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- Top Products -->
+
+                <section class="panel">
+
+
+                    <div class="panel-header">
+
+
+                        <div>
+
+                            <h2>
+                                Top Selling Products
+                            </h2>
+
+                            <p>
+                                Best performing products
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="pages/products/products.html"
+                            class="view-link"
+                        >
+
+                            View all
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                    </div>
+
+
+                    <div class="product-list">
+
+
+                        <div class="product-row">
+
+
+                            <div class="product-image">
+
+                                <i class="fa-solid fa-laptop"></i>
+
+                            </div>
+
+
+                            <div class="product-info">
+
+                                <strong>
+                                    MacBook Pro 14"
+                                </strong>
+
+                                <span>
+                                    Electronics
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-sales">
+
+                                <strong>
+                                    128
+                                </strong>
+
+                                <span>
+                                    sold
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-revenue">
+                                $38,400
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="product-row">
+
+
+                            <div class="product-image">
+
+                                <i class="fa-solid fa-mobile-screen"></i>
+
+                            </div>
+
+
+                            <div class="product-info">
+
+                                <strong>
+                                    iPhone 16 Pro
+                                </strong>
+
+                                <span>
+                                    Smartphones
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-sales">
+
+                                <strong>
+                                    96
+                                </strong>
+
+                                <span>
+                                    sold
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-revenue">
+                                $31,680
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="product-row">
+
+
+                            <div class="product-image">
+
+                                <i class="fa-solid fa-headphones"></i>
+
+                            </div>
+
+
+                            <div class="product-info">
+
+                                <strong>
+                                    AirPods Pro
+                                </strong>
+
+                                <span>
+                                    Accessories
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-sales">
+
+                                <strong>
+                                    84
+                                </strong>
+
+                                <span>
+                                    sold
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-revenue">
+                                $16,800
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="product-row">
+
+
+                            <div class="product-image">
+
+                                <i class="fa-solid fa-tablet-screen-button"></i>
+
+                            </div>
+
+
+                            <div class="product-info">
+
+                                <strong>
+                                    iPad Air
+                                </strong>
+
+                                <span>
+                                    Tablets
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-sales">
+
+                                <strong>
+                                    62
+                                </strong>
+
+                                <span>
+                                    sold
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-revenue">
+                                $14,260
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BOTTOM ROW
+            ================================================== -->
+
+            <div class="dashboard-grid three-columns">
+
+
+                <!-- Low Stock -->
+
+                <section class="panel">
+
+
+                    <div class="panel-header">
+
+
+                        <div>
+
+                            <h2>
+                                Low Stock
+                            </h2>
+
+                            <p>
+                                Products requiring attention
+                            </p>
+
+                        </div>
+
+
+                        <span class="count-badge">
+                            8
+                        </span>
+
+
+                    </div>
+
+
+                    <div class="stock-list">
+
+
+                        <div class="stock-row">
+
+                            <div>
+
+                                <strong>
+                                    Wireless Mouse
+                                </strong>
+
+                                <span>
+                                    SKU: WM-204
+                                </span>
+
+                            </div>
+
+
+                            <div class="stock-level danger">
+
+                                <strong>
+                                    3
+                                </strong>
+
+                                <span>
+                                    left
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stock-row">
+
+                            <div>
+
+                                <strong>
+                                    USB-C Hub
+                                </strong>
+
+                                <span>
+                                    SKU: UH-108
+                                </span>
+
+                            </div>
+
+
+                            <div class="stock-level warning">
+
+                                <strong>
+                                    7
+                                </strong>
+
+                                <span>
+                                    left
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stock-row">
+
+                            <div>
+
+                                <strong>
+                                    Mechanical Keyboard
+                                </strong>
+
+                                <span>
+                                    SKU: MK-552
+                                </span>
+
+                            </div>
+
+
+                            <div class="stock-level warning">
+
+                                <strong>
+                                    9
+                                </strong>
+
+                                <span>
+                                    left
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <a
+                        href="pages/inventory/inventory.html"
+                        class="panel-footer-link"
+                    >
+
+                        Manage inventory
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </section>
+
+
+
+                <!-- Pending Invoices -->
+
+                <section class="panel">
+
+
+                    <div class="panel-header">
+
+
+                        <div>
+
+                            <h2>
+                                Pending Invoices
+                            </h2>
+
+                            <p>
+                                Invoices awaiting payment
+                            </p>
+
+                        </div>
+
+
+                        <span class="count-badge orange">
+                            12
+                        </span>
+
+
+                    </div>
+
+
+                    <div class="invoice-summary">
+
+
+                        <div>
+
+                            <span>
+                                Total Due
+                            </span>
+
+                            <strong>
+                                $18,420
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Overdue
+                            </span>
+
+                            <strong>
+                                $4,280
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <span
+                            style="width:68%"
+                        ></span>
+
+                    </div>
+
+
+                    <div class="invoice-meta">
+
+                        <span>
+                            68% expected collection
+                        </span>
+
+                        <strong>
+                            32% remaining
+                        </strong>
+
+                    </div>
+
+
+                    <a
+                        href="pages/invoices/invoices.html"
+                        class="panel-footer-link"
+                    >
+
+                        View invoices
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </section>
+
+
+
+                <!-- Quick Actions -->
+
+                <section class="panel">
+
+
+                    <div class="panel-header">
+
+
+                        <div>
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+                            <p>
+                                Common business tasks
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                        >
+
+                            <span>
+
+                                <i class="fa-solid fa-plus"></i>
+
+                            </span>
+
+                            <strong>
+                                New Sale
+                            </strong>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                        >
+
+                            <span>
+
+                                <i class="fa-solid fa-file-invoice"></i>
+
+                            </span>
+
+                            <strong>
+                                New Invoice
+                            </strong>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                        >
+
+                            <span>
+
+                                <i class="fa-solid fa-box"></i>
+
+                            </span>
+
+                            <strong>
+                                Add Product
+                            </strong>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                        >
+
+                            <span>
+
+                                <i class="fa-solid fa-receipt"></i>
+
+                            </span>
+
+                            <strong>
+                                Add Expense
+                            </strong>
+
+                        </button>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="footer">
+
+
+                <span>
+                    © 2026 Bizora. All rights reserved.
+                </span>
+
+
+                <div>
+
+                    <a href="#">
+                        Documentation
+                    </a>
+
+                    <a href="#">
+                        Support
+                    </a>
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                </div>
+
+
+            </footer>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- =========================================================
+     QUICK ADD MODAL
+========================================================= -->
+
+<div
+    class="modal-backdrop"
+    id="quickAddModal"
+>
+
+
+    <div class="modal">
+
+
+        <div class="modal-header">
+
+
+            <div>
+
+                <span class="modal-eyebrow">
+                    QUICK ACTION
+                </span>
+
+                <h3>
+                    What would you like to create?
+                </h3>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="modalClose"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <div class="modal-body">
+
+
+            <button
+                type="button"
+                class="modal-action"
+            >
+
+                <span>
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </span>
+
+
+                <div>
+
+                    <strong>
+                        New Sale
+                    </strong>
+
+                    <small>
+                        Create a new sales transaction
+                    </small>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+
+
+            <button
+                type="button"
+                class="modal-action"
+            >
+
+                <span>
+
+                    <i class="fa-solid fa-file-invoice"></i>
+
+                </span>
+
+
+                <div>
+
+                    <strong>
+                        New Invoice
+                    </strong>
+
+                    <small>
+                        Create and send an invoice
+                    </small>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+
+
+            <button
+                type="button"
+                class="modal-action"
+            >
+
+                <span>
+
+                    <i class="fa-solid fa-box"></i>
+
+                </span>
+
+
+                <div>
+
+                    <strong>
+                        Add Product
+                    </strong>
+
+                    <small>
+                        Add a product to inventory
+                    </small>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+
+
+            <button
+                type="button"
+                class="modal-action"
+            >
+
+                <span>
+
+                    <i class="fa-solid fa-receipt"></i>
+
+                </span>
+
+
+                <div>
+
+                    <strong>
+                        Add Expense
+                    </strong>
+
+                    <small>
+                        Record a business expense
+                    </small>
+
+                </div>
+
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     DASHBOARD JS
+========================================================= -->
+
+<script src="assets/js/dashboard.js"></script>
+<script src="assets/js/chart.js"></script>
+
+
+</body>
+
+</html>

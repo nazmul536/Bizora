@@ -1,0 +1,113 @@
+প্রথমে Dashboard-টা premium করব
+
+Dashboard-এ থাকবে:
+
+Top KPI Cards
+
+Total Sales
+Total Revenue
+Total Expenses
+Net Profit
+Profit Margin
+Cash Balance
+Accounts Receivable
+Accounts Payable
+
+Business Overview
+
+Sales Chart
+Revenue vs Expense
+Profit Chart
+Cash Flow
+Daily / Monthly / Yearly comparison
+Growth %
+
+Business Activity
+
+Recent Sales
+Recent Expenses
+Recent Transactions
+Pending Orders
+Pending/Overdue Invoices
+
+Performance
+
+Top Selling Products
+Top Customers
+Top Expense Categories
+Low Stock Products
+
+Professional UX
+
+Date range filter
+Business/branch filter
+Customizable widgets
+Search
+Notifications
+Quick actions
+Breadcrumb
+Toast
+Modal / drawer
+Skeleton loading
+Empty state
+Error state
+Responsive cards/charts
+
+এইগুলো specification-এর Dashboard section-এর সঙ্গে সরাসরি মিলে যায়।
+
+তারপর পুরো system
+
+আমাদের development order আমি এভাবে রাখব:
+
+V1 — Core
+
+Dashboard
+Sales
+Purchases
+Expenses
+Income
+Products
+Inventory
+Customers
+Suppliers
+Invoices
+Payments
+Transactions
+Reports
+Settings
+
+V2 — Advanced
+15. Multi-business
+16. Multi-branch
+17. Roles & Permissions
+18. Employees
+19. Advanced Analytics
+20. Recurring Transactions
+21. Notifications
+22. Activity Log / Audit Trail
+
+V3 — SaaS
+23. Authentication
+24. Subscription Plans
+25. Trial
+26. Billing
+27. Team Management
+28. Cloud Database
+29. API
+30. Backup
+31. Import / Export
+32. Email
+
+V4 — ThemeForest Package
+33. Multiple Dashboard variations
+34. Reusable UI components
+35. Multiple Invoice Templates
+36. Email Templates
+37. Dark / Light
+38. RTL
+39. Demo Data
+40. Documentation
+41. Installation Guide
+42. Customization Guide
+43. Changelog
+44. Landing Page
